@@ -1,0 +1,29 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.link--nav {
+}
+
+.link--text {
+  &::after {
+    content: "";
+    display: block;
+    background-color: var(--primary-200);
+    opacity: 0.5;
+    height: 10px;
+    transform: translateY(-120%);
+  }
+  &:hover {
+    &::after {
+      background-color: var(--primary-300);
+    }
+    &:active {
+      &::after {
+        background-color: var(--primary-100);
+      }
+    }
+
+  }
+}

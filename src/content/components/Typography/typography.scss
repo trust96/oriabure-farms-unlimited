@@ -1,0 +1,34 @@
+.title {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
+}
+.title--primary {
+  font-size: 42px;
+}
+.title--secondary {
+  font-size: 36px;
+}
+.title--terziary {
+  font-size: 28px;
+}
+.title--quartenary {
+  font-size: 20px;
+}
+
+.para {
+  margin: 0;
+  line-height: var(--line-height-md);
+}
+.para--primary {
+  font-size: 16px;
+}
+.para--secondary {
+  font-size: 14px;
+}
+ .caption{
+     font-size: 12px;
+ }
+ .overline{
+     font-size: 10px;
+ }

@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 160px;
+}
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    :not(:last-child){
+        margin-right: 32px;
+    }
+}
+.footer__icon {
+
+  font-size: 2rem;
+  color: var(--primary-200);
+  &:hover {
+    color: var(--primary-300);
+  }
+}
+.footer__infos{
+    margin-bottom: 32px;
+}
+.footer__logo{
+    margin-bottom: 12px;
+}
+.footer__copyright {
+  background-color: var(--primary-200);
+  display: flex;
+  justify-content: center;
+}

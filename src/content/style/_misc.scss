@@ -1,0 +1,19 @@
+.primary{
+    background-color: var(--primary-300);
+}
+
+.text-primary{
+    color:var(--primary-300);
+}
+
+small{
+font-size: 8px;
+}
+strong{
+font-weight:var(--font-weight-bold);
+}
+
+.img-fluid{
+    max-width: 100%;
+    height:auto;
+}
