@@ -1,0 +1,9 @@
+@import "./variables", "./global";
+@import "../../node_modules/bootstrap/scss/functions",
+  "../../node_modules/bootstrap/scss/variables",
+  "../../node_modules/bootstrap/scss/mixins",
+  "../../node_modules/bootstrap/scss/forms",
+  "../../node_modules/bootstrap/scss/bootstrap-grid.scss",
+  "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+@import "../content/components/", "../content/modules/", "../content/sections/",
+  "../content/template/";

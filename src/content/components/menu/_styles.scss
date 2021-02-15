@@ -1,0 +1,47 @@
+.menu {
+  width: 52px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 4px;
+  &:focus {
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--primary-300);
+    outline: none;
+  }
+  &::after,
+  &::before,
+  &__item {
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: var(--border-radius-lg);
+    width: 100%;
+    background-color: var(--primary-300);
+    transition: all 150ms linear;
+  }
+}
+.menu__item {
+  opacity: 1;
+  margin-bottom: 8px;
+
+  &.active {
+    opacity: 0;
+    transition: all 150ms linear;
+  }
+}
+
+.menu::before {
+  transform: translateY(0) rotate(0deg);
+  margin-bottom: 8px;
+
+  &.active {
+    transform: translateY(10px) rotate(45deg);
+    transition: all 150ms linear;
+  }
+}
+.menu::after {
+  transform: translateY(0) rotate(0deg);
+  &.active {
+    transform: translateY(-10px) rotate(-45deg);
+    transition: all 150ms linear;
+  }
+}
