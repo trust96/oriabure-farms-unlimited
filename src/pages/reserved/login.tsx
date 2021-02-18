@@ -1,6 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import Button from "../content/components/button/Button";
+import Button from "../../content/components/button/Button";
 
 interface Props {}
 

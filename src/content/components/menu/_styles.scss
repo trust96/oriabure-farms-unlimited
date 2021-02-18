@@ -3,14 +3,13 @@
   border: 1px solid transparent;
   background-color: transparent;
   padding: 4px;
+  position: relative;
   &:focus {
     box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--primary-300);
     outline: none;
   }
-  &::after,
-  &::before,
+
   &__item {
-    content: "";
     display: block;
     height: 2px;
     border-radius: var(--border-radius-lg);
@@ -18,8 +17,11 @@
     background-color: var(--primary-300);
     transition: all 150ms linear;
   }
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
-.menu__item {
+.menu__item-1 {
   opacity: 1;
   margin-bottom: 8px;
 
@@ -29,7 +31,7 @@
   }
 }
 
-.menu::before {
+.menu__item-0 {
   transform: translateY(0) rotate(0deg);
   margin-bottom: 8px;
 
@@ -38,7 +40,7 @@
     transition: all 150ms linear;
   }
 }
-.menu::after {
+.menu__item-2 {
   transform: translateY(0) rotate(0deg);
   &.active {
     transform: translateY(-10px) rotate(-45deg);

@@ -1,0 +1,46 @@
+.header {
+  min-height: 500px;
+  padding-top: 80px;
+  background-image: url("/images/bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  &__title {
+    text-align: left;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    font-weight: var(--font-weight-bold);
+  }
+  &__text {
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem !important;
+  }
+  &__button {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include media-breakpoint-up(md) {
+      transform: none;
+      position: static;
+    }
+    button {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      @include media-breakpoint-up(md) {
+        width: auto;
+        display: inline-block;
+        max-width: auto;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+          margin-right: 0.75rem;
+        }
+      }
+    }
+  }
+}

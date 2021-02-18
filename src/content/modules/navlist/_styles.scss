@@ -1,37 +1,11 @@
 .nav__list {
-  list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-}
-.nav__item {
-  &.active {
-    border-bottom: 4px solid var(--primary-300);
-    color: var(--primary-300);
-  }
-}
-.nav__link {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.75rem;
-  font-weight: var(--font-weight-normal);
-  text-transform: capitalize;
+  list-style: none;
 }
 
-.drawer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: red;
-}
-.drawer__item {
-  display: flex;
-}
-.drawer__link {
-  flex-basis: 100%;
-  text-decoration: none;
+.nav__link {
   color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
 }

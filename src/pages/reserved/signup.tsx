@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import Button from "../content/components/button/Button";
-
+import Button from "../../content/components/button/Button";
 interface Props {}
 
 const signup = (props: Props) => {

@@ -1,5 +1,7 @@
 .logo {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 .logo__image {
   border-radius: 100%;

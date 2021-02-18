@@ -1,9 +1,19 @@
 import React from "react";
+import { NavProvider } from "../../../utils/context/nav_context";
+import Navbar from "../../modules/navbar/Navbar";
 
 interface Props {}
 
 const Nav = ({}: Props) => {
-  return <div></div>;
+  return (
+    <nav className="nav">
+      <div className="container-lg container-fluid">
+        <NavProvider>
+          <Navbar />
+        </NavProvider>
+      </div>
+    </nav>
+  );
 };
 
 export default Nav;

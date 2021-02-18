@@ -1,0 +1,22 @@
+.footer__title {
+  font-weight: var(--font-weight-bold);
+}
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-200);
+}
+.footer__icons {
+  display: flex;
+  justify-content: center;
+}
+.footer__icon {
+  font-size: 2rem;
+  color: var(--primary-200);
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  &:hover {
+    color: var(--primary-400);
+  }
+}
