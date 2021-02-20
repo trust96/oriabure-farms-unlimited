@@ -38,7 +38,13 @@
       @include media-breakpoint-up(md) {
         display: initial;
         font-size: 1rem;
-        padding: 2rem;
+        padding: 1.5rem 2rem;
+        &:hover {
+          border-bottom: 4px solid var(--primary-300);
+        }
+        &.active {
+          border-bottom: 4px solid var(--primary-300);
+        }
       }
     }
     .nav__button {

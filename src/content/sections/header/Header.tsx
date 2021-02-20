@@ -2,13 +2,14 @@ import React from "react";
 import { ButtonGroup } from "react-bootstrap";
 import Button from "../../components/button/Button";
 import Typography from "../../components/typography/Typography";
+import Container from "../../template/container/Container";
 
 interface Props {}
 
 const Header = ({}: Props) => {
   return (
     <header className="header">
-      <div className="container-lg container-fluid">
+      <Container>
         <div className="row">
           <section className="header__content col-12 col-lg-8">
             <Typography
@@ -42,7 +43,7 @@ const Header = ({}: Props) => {
             <img className="img-fluid" src="/images/breadfruit.png" alt="" />
           </section>
         </div>
-      </div>
+      </Container>
     </header>
   );
 };

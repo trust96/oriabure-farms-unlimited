@@ -2,13 +2,14 @@ import React from "react";
 import Typography from "../../components/typography/Typography";
 import Navlist from "../../modules/navlist/Navlist";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import Container from "../../template/container/Container";
 
 interface Props {}
 
 const Footer = ({}: Props) => {
   return (
     <footer className="footer">
-      <div className="container-md container-fluid">
+      <Container>
         <section className="footer__nav">
           <Typography
             tag="h4"
@@ -25,7 +26,7 @@ const Footer = ({}: Props) => {
           <FaInstagram className="footer__icon" />
           <FaTwitter className="footer__icon" />
         </section>
-      </div>
+      </Container>
       <section className="footer__copyright">
         &copy; All right reserved to oriabure farms unlimited
       </section>

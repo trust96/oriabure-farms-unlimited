@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { NavContext } from "../../../utils/context/nav_context";
 import Button from "../../components/button/Button";
@@ -7,20 +7,45 @@ import Menu from "../../components/menu/Menu";
 import Navlist from "../navlist/Navlist";
 
 interface Props {}
-
+interface IActive {
+  home: boolean;
+  about: boolean;
+  services: boolean;
+  contact: boolean;
+}
 const Navbar = ({}: Props) => {
+  const [isActive, setIsActive] = useState<IActive>({
+    home: false,
+    about: false,
+    services: false,
+    contact: false,
+  });
   const { isToggle, setIsToggle } = useContext(NavContext);
   const router = useRouter();
   const handleToggle = () => {
     setIsToggle((prevstate) => !prevstate);
   };
+
+  useEffect(() => {
+    switch (router.pathname) {
+      case "/":
+        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+      case "/about_us":
+        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+      case "/services":
+        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+      case "/contact_us":
+        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+    }
+  });
+
   const handleClick = () => {
     router.push("/dashbord/signin");
   };
   return (
     <div className={`nav__bar`}>
       <Logo variant="small" />
-      <Navlist className={`${isToggle ? "active" : ""}`}>
+      <Navlist className={` ${isToggle ? "active" : ""}`}>
         <Button
           onClick={handleClick}
           className="nav__button"
@@ -28,7 +53,7 @@ const Navbar = ({}: Props) => {
           size="sm"
           fullwidth
         >
-          login
+          login {isActive.home}
         </Button>
       </Navlist>
       <Menu onClick={handleToggle} />

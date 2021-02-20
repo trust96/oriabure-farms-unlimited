@@ -1,0 +1,18 @@
+.section {
+  padding: 4rem 0;
+  &__title {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-bottom: 2rem !important;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      background-color: var(--primary-300);
+    }
+  }
+}

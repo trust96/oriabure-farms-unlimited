@@ -1,0 +1,40 @@
+.services {
+  background-color: var(--primary-100);
+  &__img {
+    @include media-breakpoint-up(md) {
+      flex-basis: 80%;
+    }
+  }
+  &__item {
+    margin-bottom: -5rem;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  }
+  &__paper {
+    width: 90%;
+    max-width: 450px;
+    transform: translateY(50%);
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      min-width: 400px;
+    }
+  }
+  &__paper-2 {
+    transform: translateX(-50%);
+  }
+  &__paper-0 {
+    margin-top: -7rem;
+    @include media-breakpoint-up(md) {
+      transform: translateX(50%);
+    }
+  }
+  &__paper-3 {
+    @include media-breakpoint-up(md) {
+      transform: translateX(50%);
+    }
+  }
+}
