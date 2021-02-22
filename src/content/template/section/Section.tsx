@@ -6,7 +6,7 @@ import Container from "../container/Container";
 interface Props {
   className?: string;
   children: React.ReactNode;
-  title: string;
+  title?: string;
 }
 
 const Section = ({ className, children, title }: Props) => {

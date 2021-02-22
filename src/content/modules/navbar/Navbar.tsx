@@ -29,18 +29,19 @@ const Navbar = ({}: Props) => {
   useEffect(() => {
     switch (router.pathname) {
       case "/":
-        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+        return setIsActive((prevstate) => ({ ...prevstate, home: true }));
       case "/about_us":
-        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+        return setIsActive((prevstate) => ({ ...prevstate, home: true }));
       case "/services":
-        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+        return setIsActive((prevstate) => ({ ...prevstate, home: true }));
       case "/contact_us":
-        setIsActive((prevstate) => ({ ...prevstate, home: true }));
+        return setIsActive((prevstate) => ({ ...prevstate, home: true }));
     }
-  });
+  }, []);
 
   const handleClick = () => {
-    router.push("/dashbord/signin");
+    router.push("/reserved/login");
+    setIsToggle(!isToggle);
   };
   return (
     <div className={`nav__bar`}>

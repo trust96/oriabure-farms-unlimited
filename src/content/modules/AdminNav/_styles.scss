@@ -1,0 +1,43 @@
+.admin_nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray-100);
+  @include media-breakpoint-up(md) {
+    bottom: auto;
+    right: 0;
+    width: auto;
+    height: 70vh;
+    flex-direction: column;
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__button {
+    border: 1px solid transparent;
+    background-color: var(--gray-100);
+    padding: 2rem;
+    color: var(--primary-400);
+    &:hover {
+      background-color: var(--gray-200);
+      color: var(--primary-300);
+    }
+    &:active {
+      background-color: var(--gray-300);
+    }
+    &:focus {
+      border-top: 4px solid var(--primary-300);
+      color: var(--primary-300);
+      outline: none;
+      @include media-breakpoint-up(md) {
+        border-left: 4px solid var(--primary-300);
+        border-top: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.head {
+  background-color: var(--primary-400);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.head__title {
+  color: var(--white);
+  display: inline-block;
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--white);
+  }
+}
