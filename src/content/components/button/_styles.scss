@@ -21,7 +21,20 @@
     outline: none;
   }
 }
-
+.btn--success {
+  background-color: var(--success-300);
+  color: var(--white);
+  &:hover {
+    background-color: var(--success-400);
+  }
+  &:active {
+    background-color: var(--success-200);
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--success-300);
+    outline: none;
+  }
+}
 .btn--danger {
   background-color: var(--danger-300);
   color: var(--white);

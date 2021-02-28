@@ -26,3 +26,23 @@ body {
     display: none;
   }
 }
+.admin {
+  overflow: hidden;
+  &__container {
+    background-color: green;
+    overflow: hidden;
+    position: relative;
+  }
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 200%;
+    position: absolute;
+  }
+  &__report {
+    flex-basis: 100%;
+  }
+  &__add_user {
+    flex-basis: 100%;
+  }
+}

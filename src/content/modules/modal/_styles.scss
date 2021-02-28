@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  &.active {
+    display: flex;
+  }
+  &__wrapper {
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-md);
+    max-width: 350px;
+    opacity: 0.5;
+    transform: scale(0);
+    transition: all 150ms ease-out;
+    &.active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 150ms ease-in;
+    }
+  }
+  &__content {
+    padding: 0.75rem 1.25rem;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__close {
+    position: relative;
+    right: -300px;
+    top: 16px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

@@ -1,11 +1,17 @@
 import React from "react";
 import "../style/index.scss";
 import Layout from "../content/template/layout/Layout";
-function MyApp({ Component, pageProps }) {
+import { ModalProvider } from "../utils/context/modal";
+import { AuthProvider } from "../utils/auth/authProvider";
+function MyApp({ Component, pageProps }): JSX.Element {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <ModalProvider>
+          <Component {...pageProps} />
+        </ModalProvider>
+      </Layout>
+    </AuthProvider>
   );
 }
 

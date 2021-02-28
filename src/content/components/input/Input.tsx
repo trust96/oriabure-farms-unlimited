@@ -4,10 +4,12 @@ import { Form } from "react-bootstrap";
 interface Props {
   controlId?: string;
   children: React.ReactNode;
-  type: string;
+  type?: string;
   placeholder?: string;
   className?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  rows?: number;
+  as?: "input" | "textarea" | "select";
 }
 
 const Input = ({
@@ -17,6 +19,8 @@ const Input = ({
   type,
   className,
   onChange,
+  as,
+  rows,
 }: Props): ReactElement => {
   return (
     <>
@@ -27,6 +31,8 @@ const Input = ({
           type={type}
           placeholder={placeholder}
           onChange={onChange}
+          as={as}
+          rows={rows}
         ></Form.Control>
       </Form.Group>
     </>

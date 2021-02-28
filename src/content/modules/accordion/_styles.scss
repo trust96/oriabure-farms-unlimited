@@ -1,4 +1,7 @@
 .accordion {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
   &__button {
     background-color: var(--primary-300);
     display: flex;

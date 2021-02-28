@@ -1,15 +1,22 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useContext, useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import Button from "../../content/components/button/Button";
 import Input from "../../content/components/input/Input";
 import Typography from "../../content/components/typography/Typography";
 import Head from "../../content/modules/Head/Head";
-import Container from "../../content/template/container/Container";
 import Section from "../../content/template/section/Section";
+import { AuthContext } from "../../utils/auth/authProvider";
+import signIn from "../../utils/auth/signIn";
 
-interface Props {}
+const login = () => {
+  const { user } = useContext(AuthContext);
+  const [auth, setAuth] = useState({
+    email: "",
+    password: "",
+  });
+  const router = useRouter();
 
-const login = (props: Props) => {
   return (
     <>
       <Head>Login</Head>
@@ -27,11 +34,39 @@ const login = (props: Props) => {
           please <strong>sign in</strong> and submit your report
         </Typography>
 
-        <Form>
-          <Input controlId="username" type="text">
-            Username
+        <Form
+          onSubmit={async (e) => {
+            e.preventDefault();
+            await signIn(auth.email, auth.password);
+            user === "ekoh oriabure augustine"
+              ? router.push("/reserved/admin")
+              : user
+              ? router.push("/reserved/report")
+              : router.push("/reserved/login");
+          }}
+        >
+          <Input
+            controlId="username"
+            type="text"
+            onChange={(e) => {
+              setAuth((prevstate) => ({
+                ...prevstate,
+                email: e.target.value,
+              }));
+            }}
+          >
+            Email
           </Input>
-          <Input controlId="password" type="password">
+          <Input
+            controlId="password"
+            type="password"
+            onChange={(e) => {
+              setAuth((prevstate) => ({
+                ...prevstate,
+                password: e.target.value,
+              }));
+            }}
+          >
             Password
           </Input>
           <Button fullwidth variant="primary" size="sm">
